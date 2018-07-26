@@ -1,0 +1,143 @@
+/* List Item */
+//
+
+// Post Item Type A
+//
+.post-item-type-a {
+	position: relative;
+	min-height: 162px;
+	padding: 16px 16px 16px 164px;
+	border-bottom: solid 1px $divider-purple;
+	& a > .post-item-thumbnail {
+		position: absolute;
+		top: 16px;
+		left: 16px;
+		display: block;
+		width: 128px;
+		height: 128px;		
+		@include hover_object();
+	}
+	&:last-child {
+		border-bottom: 0;
+	}
+	& {
+		@include clearfix();
+	}
+}
+
+.post-item-title {
+	min-height: 109px;
+	& a > h2 {
+		font-size: $title-size;
+		line-height: $line-height;
+		font-weight: $title-weight;
+		word-wrap: break-word;
+		margin: 0;
+		max-height: ($line-height*3rem);
+		width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis; 
+	}
+	&> a {
+		display: inline-block;
+		color: $grey-300;
+		text-decoration: $link-decoration;		
+			&:visited {
+			  color: $orange-a100;
+			  text-decoration: $link-decoration;
+			}
+			&:hover {
+			  color: $white;
+			  text-decoration: $link-decoration;
+			}
+			&:focus {
+			  color: $white;
+			  text-decoration: $link-decoration;
+			}
+			&:active {
+			  color: $purple-pantip-100;
+			}
+  	}
+}
+.post-item-by {	
+	font-size: $subtitle-2-size;
+	color: $purple-pantip-300;
+	float: left;
+	width: 70%;
+	white-space: nowrap;	
+	&> span > b {
+		color: $purple-pantip-200;
+	}
+}
+
+.post-item-extend {
+	width: 100%;
+	display: block;
+	font-size: $subtitle-2-size;
+}
+
+.post-item-viewstat {	
+	color: $purple-pantip-300;
+	float: left;
+	width: 30%;
+	white-space: nowrap;
+	&> span {
+		display: inline-flex;
+		margin-left: 8px;
+		&> i {
+			margin-right: 4px;
+		}
+	}
+	&> span:first-child {
+		margin-left: 0;
+	}
+}
+
+@media (max-width: 400px) {
+	.post-item-viewstat {
+		display: none;
+	} 		
+}
+@media (max-width: 576px) {
+	.post-item-viewstat {
+		float: right;
+		text-align: right;
+		&>span:nth-child(1), span:nth-child(3) {
+			display: none;
+		}
+	} 	
+	.post-item-title {
+		min-height: 109px;
+		& a > h2 {
+			max-height: ($line-height*4rem);
+		}
+	}
+}
+
+.post-item-tag {
+	float: right;
+	width: 70%;
+    text-align: right;
+	&> a {
+		display: inline-block;
+		margin-left: 8px;
+		color: $purple-pantip-300;
+		text-decoration: $link-decoration;		
+			&:visited {
+			  color: $purple-pantip-300;
+			  text-decoration: $link-decoration;
+			}
+			&:hover {
+			  color: $yellow-700;
+			  text-decoration: $link-decoration;
+			}
+			&:focus {
+			  color: $yellow-700;
+			  text-decoration: $link-decoration;
+			}
+			&:active {
+			  color: $orange-a100;
+			}
+  	}
+}
+

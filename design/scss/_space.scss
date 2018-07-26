@@ -1,0 +1,22 @@
+/* Space */
+//
+// Padding all space 
+//
+$types: 32;
+@while $types >= 0 {
+	.p-all-#{$types} { padding: #{$types}px !important; }// Padding all space
+	.p-t-#{$types} { padding-top: #{$types}px !important; }// Padding top space
+	.p-b-#{$types} { padding-bottom: #{$types}px !important; }// Padding bottom space
+	.p-l-#{$types} { padding-left: #{$types}px !important; }// Padding-left space
+	.p-r-#{$types} { padding-right: #{$types}px !important; }// Padding right space
+	.p-lnr-#{$types} { padding: 0 #{$types}px !important; }// Padding left and right space 
+	.p-tnb-#{$types} { padding: #{$types}px 0 !important; }// Padding top and bottom space 
+	.m-all-#{$types} { margin: #{$types}px !important; }// Margin all space 
+	.m-t-#{$types} { margin-top: #{$types}px !important; }// Margin top space
+	.m-b-#{$types} { margin-bottom: #{$types}px !important; }// Margin bottom space
+	.m-l-#{$types} { margin-left: #{$types}px !important; }// Margin-left space
+	.m-r-#{$types} { margin-right: #{$types}px !important; }// Margin right space
+	.m-rnl-#{$types} { margin: 0 #{$types}px !important; }// Margin left and right space 
+	.m-tnb-#{$types} { margin: #{$types}px 0 !important; }// Margin top and bottom space
+	$types: $types - 2
+}

@@ -1,0 +1,295 @@
+/* Components */
+
+// Toggle Div
+//
+.pt-sm-toggle-hide, .pt-md-toggle-hide, .pt-lg-toggle-hide, .pt-xl-toggle-hide {
+	display: none;
+}
+
+@media (max-width: 576px) {
+	.pt-sm-toggle-hide {
+		display: block;	}}
+@media (max-width: 768px) {
+	.pt-md-toggle-hide {
+		display: block;	}}
+@media (max-width: 992px) {
+	.pt-lg-toggle-hide {
+		display: block;	}}
+@media (max-width: 1200px) {
+	.pt-xl-toggle-hide {
+		display: block;	}}
+
+.pt-sm-toggle-show, .pt-md-toggle-show, .pt-lg-toggle-show, .pt-xl-toggle-show {
+	display: block;
+}
+
+@media (max-width: 576px) {
+	.pt-sm-toggle-show {
+		display: none;	}}
+@media (max-width: 768px) {
+	.pt-md-toggle-show {
+		display: none;	}}
+@media (max-width: 992px) {
+	.pt-lg-toggle-show {
+		display: none;	}}
+@media (max-width: 1200px) {
+	.pt-xl-toggle-show {
+		display: none;	}}
+
+// Block and Box
+//
+.pt-block {	
+	border-style: solid;	
+	border-width: 1px;
+	margin-bottom: 16px;
+	&{
+		@include clearfix();
+	}
+}
+
+@media (max-width: 576px) {
+	.pt-block {
+		border-width: 1px 0px; 
+		margin-bottom: ($grid-gutter-width / 2);
+	} 		
+}
+
+.pt-block-purple-1 {
+	border-color: $purple-pantip-300;
+	background-color: $purple-pantip-800;
+	-webkit-box-shadow: $elevation-1dp;
+	box-shadow: $elevation-1dp;
+}
+
+.pt-block-purple-2 {
+	border-color: $purple-pantip-300;
+	background-color: $purple-pantip-700;
+	-webkit-box-shadow: $elevation-1dp;
+	box-shadow: $elevation-1dp;
+}
+
+// Header
+
+.pt-block-header {
+	padding: 12px 16px;
+	&h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+		margin-bottom: 0;
+		word-wrap: break-word;
+	}
+}
+
+.pt-block-header-purple-1 {
+	background-color: $purple-pantip-900;
+	border-bottom: solid 1px $purple-pantip-300;
+}
+
+// pantip profile
+.pt-profile {
+	position: relative;
+}
+
+.pt-profile-cover {
+	position: relative;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0;
+	max-height: 300px;
+	max-width: 1140px;
+	display: block;
+	overflow: hidden;
+	padding-top: 200px;
+	border-bottom: solid 1px $purple-pantip-400;	
+	&> i {
+		position: absolute;
+		right: 16px;
+		bottom: 12px;
+		z-index: 12;
+		cursor: pointer;
+		@include hover_opacity;
+	}
+}
+
+.pt-profile-cover:before {
+	content: "";
+	display: block;
+	width: 100%;
+}
+
+.pt-profile-cover:after {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 120px;
+	width: 100%;
+	background: linear-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0, .7));
+}
+
+.pt-profile-display {
+	height: 128px;
+	width: 128px;
+	border: solid 4px $purple-pantip-400;
+	border-radius: 50%;
+	margin: 20px;
+	position: absolute;
+	top: 90px;
+	left: 0;
+}
+
+.pt-profile-title {
+	position: absolute;
+	top: 130px;
+	left: 0;
+	padding-left: 168px;
+	&> h1 {
+		font-size: $font-size-h2;	
+		text-shadow: $text-shadow-1dp;
+		word-wrap: break-word;
+		margin-bottom: 0.25rem;
+	}
+	&> span {
+		font-size: $subtitle-2-size;
+		text-shadow: $text-shadow-1dp;
+		cursor: pointer;
+		&> b {
+		font-size: $subtitle-1-size;
+		font-weight: 500;
+		color: $yellow-700;
+		padding-right: 8px; } 
+	}
+	&> span {
+		@include hover_object;
+	}
+}			
+
+.pt-profile-info {
+	&> p {
+		margin-bottom: 8px;
+		&> span {
+			margin-right: 16px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.pt-profile-action {
+	height: 56px;
+	padding: 0 16px 0 168px;
+}
+
+.pt-profile-follow {
+	text-align: left;
+	display: block;
+	float: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	cursor: pointer;
+	&> a:link, &> a:visited, &> a:active {
+			text-decoration: none;
+			&> span {
+				font-size: $subtitle-2-size !important;
+				color: $purple-pantip-300 !important;	
+				display: inline-flex;		
+				line-height: 36px;
+				padding-left: 20px;
+				padding-right: 20px;				
+				&> b {
+					font-size: $font-size-lg !important;
+					color: $purple-pantip-50 !important;
+					padding-right: 8px; 
+				}
+			}			
+		}
+	&> a:first-child > span {
+					padding-left: 0;
+					border-right: solid 1px $divider-purple;
+	}
+	&> a:hover {
+		text-decoration: none;
+		&> span {
+				@include hover_object;
+		}
+	}
+}
+
+.pt-profile-button {
+	display: block;
+	float: right;
+	line-height: 56px;
+}
+
+@media (max-width: 768px) {
+	.pt-profile-title {
+		top: auto;
+		left: auto;
+		padding-left: 0;
+		text-align: center;
+		padding: 64px 16px 0 16px;
+		position: relative;
+		&> h1 {
+			font-size: $font-size-h3;	
+			text-shadow: none;
+			font-weight: 500;
+		}
+		&> span {
+			font-size: $subtitle-1-size;
+			text-shadow: none;
+		}
+	}
+	
+	.pt-profile-info {
+		padding-bottom: 0px !important;
+	}
+	
+	.pt-profile-button {
+		float: none;
+		text-align: center;
+		padding-top: -10px;
+		margin-bottom: 8px;
+	}
+	
+	.pt-profile-cover {
+		padding-top: 120px;
+	}
+	
+	.pt-profile-display {			
+		position: absolute;
+		top: 32px;
+		left: 50%;
+		margin-left: -64px;
+	}
+	
+	.pt-profile-action {
+		padding: 0;		
+	}	
+	
+	.pt-profile-follow {
+		width: 100%;
+		display: flex;
+		padding: 10px 16px;
+		border-top: solid 1px $divider-purple;
+		&> a:link, &> a:visited, &> a:active {
+				width: 50%;
+			&> span {				
+				display: block;
+				text-align: center;
+				line-height: $line-height;				
+				padding-left: 0;
+				padding-right: 0;
+				&> b {
+					display: block;
+					width: 100%;
+				}
+			}			
+		}
+
+	}
+}
+
+
+
+

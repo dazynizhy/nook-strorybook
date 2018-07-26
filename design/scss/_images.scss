@@ -1,0 +1,76 @@
+// Responsive images 
+//
+
+.img-fluid {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Image thumbnails
+//
+/* Default Image 1:1 Aspect Ratio */
+.img-thumbnail { 
+  display: block;
+  overflow: hidden;
+  position: relative;	
+  transition: all .2s ease-in-out;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  max-height: 720px;
+  max-width: 720px;
+	&:before { 
+		content: "";
+		display: block;
+		width: 100%;
+		padding-top: 100%; /* 1:1 Aspect Ratio */
+	}
+}
+
+// Aspect Ratio
+.img-ratio--16by9:before {
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.img-ratio--3by2:before {
+  padding-top: 66.66%; /* 3:2 Aspect Ratio */
+}
+
+.img-ratio--4by3:before {
+  padding-top: 75%; /* 4:3 Aspect Ratio */
+}
+
+.img-ratio--3by4:before {
+  padding-top: 133.33%; /* 3:4 Aspect Ratio */
+}
+
+.img-ratio--2by3:before {
+  padding-top: 150%; /* 2:3 Aspect Ratio */
+}
+
+// Perfect circle
+.img-circle {
+  border-radius: 50%;
+}
+
+//
+// Figures
+//
+
+.figure {
+  // Ensures the caption's text aligns with the image.
+  display: inline-block;
+}
+
+.figure-img {
+  margin-bottom: ($spacer-y / 2);
+  line-height: 1;
+}
+
+.figure-caption {
+  font-size: 90%;
+  color: $grey-500;
+}

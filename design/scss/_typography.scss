@@ -1,0 +1,137 @@
+/* Typography */
+
+//
+// Text
+//
+
+// Alignment
+
+.text-justify        { text-align: justify !important; }
+.text-nowrap         { white-space: nowrap !important; }
+
+// Transformation
+
+.text-lowercase      { text-transform: lowercase !important; }
+.text-uppercase      { text-transform: uppercase !important; }
+.text-capitalize     { text-transform: capitalize !important; }
+
+// Weight and italics
+
+.font-weight-normal  { font-weight: normal; }
+.font-weight-bold    { font-weight: bold; }
+.font-italic         { font-style: italic; }
+
+// Text with icon
+
+.text-icon-left {
+	display: inline-flex; 
+	align-items: center;
+	&> i {
+		margin-right: 4px;
+	}
+}
+.text-icon-right {
+	display: inline-flex; 
+	align-items: center;
+	&> i {
+		margin-left: 4px;
+	}
+	
+}
+
+//
+// Headings
+//
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: $headings-margin-bottom;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-color;
+}
+
+h1 { font-size: $font-size-h1; }
+h2 { font-size: $font-size-h2; }
+h3 { font-size: $font-size-h3; }
+h4 { font-size: $font-size-h4; }
+h5 { font-size: $font-size-h5; }
+h6 { font-size: $font-size-h6; }
+
+// These declarations are kept separate from and placed after
+// the previous tag-based declarations so that the classes beat the tags in
+// the CSS cascade, and thus <h1 class="h2"> will be styled like an h2.
+.h1 { font-size: $font-size-h1; }
+.h2 { font-size: $font-size-h2; }
+.h3 { font-size: $font-size-h3; }
+.h4 { font-size: $font-size-h4; }
+.h5 { font-size: $font-size-h5; }
+.h6 { font-size: $font-size-h6; }
+
+.lead {
+  font-size: $lead-font-size;
+  font-weight: $lead-font-weight;
+}
+
+// Type display classes
+.display-1 {
+  font-size: $display1-size;
+  font-weight: $display1-weight;
+}
+.display-2 {
+  font-size: $display2-size;
+  font-weight: $display2-weight;
+}
+.display-3 {
+  font-size: $display3-size;
+  font-weight: $display3-weight;
+}
+.display-4 {
+  font-size: $display4-size;
+  font-weight: $display4-weight;
+}
+
+// Typescale medium classes
+.title {
+  font-size: $title-size;
+  font-weight: $title-weight;
+}
+.subtitle-1 {
+  font-size: $subtitle-1-size;
+  font-weight: $subtitle-1-weight;
+}
+.subtitle-2 {
+  font-size: $subtitle-2-size;
+  font-weight: $subtitle-2-weight;
+}
+.body-1 {
+  font-size: $body-1-size;
+  font-weight: $body-1-weight;
+}
+.body-2 {
+  font-size: $body-2-size;
+  font-weight: $body-2-weight;
+}
+.body-3 {
+  font-size: $body-3-size;
+  font-weight: $body-3-weight;
+}
+
+// Typescale small classes
+.caption {
+  font-size: $caption-size;
+  font-weight: $caption-weight;
+}
+.overline {
+  font-size: $overline-size;
+  font-weight: $overline-weight;
+}
+.small-1 {
+  font-size: $small-1-size;
+  font-weight: $small-1-weight;
+}
+.small-2 {
+  font-size: $small-2-size;
+  font-weight: $small-2-weight;
+}

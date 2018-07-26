@@ -1,0 +1,346 @@
+// Variables
+
+// Table of Contents
+//
+// Colors
+// Options
+// Spacing
+// Body
+// Links
+// Grid breakpoints
+// Grid containers
+// Grid columns
+// Typography
+// Components
+
+// Colors
+//
+// Grayscale and colors for use pantip
+
+$black:						#000000 !default;
+$white:						#FFFFFF !default;
+
+$grey-50:                 	#FAFAFA !default;
+$grey-100:                 	#F5F5F5 !default;
+$grey-200:                 	#EEEEEE !default;
+$grey-300:                 	#E0E0E0 !default;
+$grey-400:                 	#BDBDBD !default;
+$grey-500:                 	#9E9E9E !default;
+$grey-600:                 	#757575 !default;
+$grey-700:                 	#616161 !default;
+$grey-800:                 	#424242 !default;
+$grey-900:                 	#212121 !default;
+
+$red-500:                 	#F44336 !default;
+$pink-500:                 	#E91E63 !default;
+$purple-500:                #9C27B0 !default;
+$deeppurple-500:           	#673AB7 !default;
+$indigo-500:                #3F51B5 !default;
+$blue-500:                 	#2196F3 !default;
+$lightblue-500:            	#03A9F4 !default;
+$cyan-500:                 	#00BCD4 !default;
+$teal-500:                	#009688 !default;
+$green-500:               	#4CAF50 !default;
+$lightgreen-500:            #8BC34A !default;
+$lime-500:                	#CDDC39 !default;
+$yellow-500:                #FFEB3B !default;
+$amber-500:                	#FFC107 !default;
+$orange-500:                #FF9800 !default;
+$deeporange-500:            #FF5722 !default;
+$brown-500:                	#795548 !default;
+$bluegrey-500:              #607D8B !default;
+
+$red-400:                 	#EF5350 !default;
+$pink-400:                 	#EC407A !default;
+$purple-400:                #AB47BC !default;
+$deeppurple-400:           	#7E57C2 !default;
+$indigo-400:                #5C6BC0 !default;
+$blue-400:                 	#42A5F5 !default;
+$lightblue-400:            	#29B6F6 !default;
+$cyan-400:                 	#26C6DA !default;
+$teal-400:                	#26A69A !default;
+$green-400:               	#66BB6A !default;
+$lightgreen-400:            #9CCC65 !default;
+$lime-400:                	#D4E157 !default;
+$yellow-400:                #FFEE58 !default;
+$amber-400:                	#FFCA28 !default;
+$orange-400:                #FFA726 !default;
+$deeporange-400:            #FF7043 !default;
+$brown-400:                	#8D6E63 !default;
+$bluegrey-400:              #78909C !default;
+
+$yellow-600:                #FDD835 !default;
+$yellow-700:                #FBC02D !default;
+$orange-a100:				#FFD180 !default;
+
+$purple-pantip-50:			#E9E5F6 !default;
+$purple-pantip-100:			#BFBCDA !default;
+$purple-pantip-200:			#9D9AC0 !default;
+$purple-pantip-300:			#7976A0 !default;
+$purple-pantip-400:			#565380 !default;
+$purple-pantip-500:			#44416F !default;
+$purple-pantip-600:			#3C3963 !default;
+$purple-pantip-700:			#353156 !default;
+$purple-pantip-800:			#2D2A49 !default;
+$purple-pantip-900:			#1F1D33 !default;
+
+$indigo-pantip-50:			#e8eaf6 !default;
+$indigo-pantip-100:			#9aaccd !default;
+$indigo-pantip-200:			#45679f !default;
+$indigo-pantip-300:			#264b89 !default;
+$indigo-pantip-400:			#1f407d !default;
+$indigo-pantip-500:			#1c3972 !default;
+$indigo-pantip-600:			#183268 !default;
+$indigo-pantip-700:			#172c5a !default;
+$indigo-pantip-800:			#132449 !default;
+$indigo-pantip-900:			#0D1932 !default;
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-grid-classes:       true !default;
+
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+
+$spacer:                     1rem !default;
+$spacer-x:                   $spacer !default;
+$spacer-y:                   $spacer !default;
+$spacers: (
+  0: (
+    x:   0,
+    y:   0
+  ),
+  1: (
+    x:   $spacer-x,
+    y:   $spacer-y
+  ),
+  2: (
+    x:   ($spacer-x * 1.5),
+    y:   ($spacer-y * 1.5)
+  ),
+  3: (
+    x:   ($spacer-x * 3),
+    y:   ($spacer-y * 3)
+  )
+) !default;
+$border-width:               1px !default;
+
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:                    $purple-pantip-600 !default;
+$body-color:                 $purple-pantip-50 !default;
+
+
+// Links
+//
+// Style anchor elements.
+
+$link-color:                 $yellow-700 !default;
+$link-decoration:            none !default;
+$link-hover-color:           lighten($link-color, 15%) !default;
+$link-hover-decoration:      underline !default;
+$link-visited-color:		 $orange-a100 !default;
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+//@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+//@include _assert-starts-at-zero($grid-breakpoints);
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+//@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:                12 !default;
+$grid-gutter-width:           20px !default;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$line-height-lg:              1.5 !default;
+$line-height-sm:              1.5 !default;
+
+$border-width:                1px !default;
+$border-color:                $grey-500 !default;
+
+$border-radius:               .25rem !default;
+$border-radius-lg:            .3rem !default;
+$border-radius-sm:            .2rem !default;
+
+$component-active-color:      $white !default;
+$component-active-bg:         $grey-500 !default;
+
+$caret-width:                 .3em !default;
+
+$transition-base:             all .2s ease-in-out !default;
+$transition-fade:             opacity .15s linear !default;
+$transition-collapse:         height .35s ease !default;
+
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:     "Helvetica Neue", Helvetica, Arial, sans-serif, Geneva, Tahoma !default;
+$font-family-base:           $font-family-sans-serif !default;
+
+$font-size-root:             16px !default;
+
+$font-size-base:             1rem !default;
+$font-size-lg:               1.25rem !default;
+$font-size-sm:               .875rem !default;
+$font-size-xs:               .75rem !default;
+$font-size-xxs:              .625rem !default;
+
+$font-size-h1:               2.5rem !default;
+$font-size-h2:               2rem !default;
+$font-size-h3:               1.75rem !default;
+$font-size-h4:               1.5rem !default;
+$font-size-h5:               1.25rem !default;
+$font-size-h6:               1rem !default;
+
+$display1-size:               6rem !default;
+$display2-size:               5.5rem !default;
+$display3-size:               4.5rem !default;
+$display4-size:               3.5rem !default;
+
+$display1-weight:             300 !default;
+$display2-weight:             300 !default;
+$display3-weight:             300 !default;
+$display4-weight:             300 !default;
+
+$text-muted:                  $grey-500 !default;
+
+$line-height:                1.5 !default;
+$line-height-lead:           1.8 !default;
+$line-height-small:          1.1 !default;
+
+$headings-margin-bottom:     ($spacer / 2) !default;
+$headings-font-family:       inherit !default;
+$headings-font-weight:       500 !default;
+$headings-line-height:       1.1 !default;
+$headings-color:             inherit !default;
+
+$lead-font-size:             1.25rem !default;
+$lead-font-weight:           300 !default;
+
+$title-size:				1rem !default;
+$subtitle-1-size:			1rem !default;
+$subtitle-2-size:			.875rem !default;
+$body-1-size:				1rem !default;
+$body-2-size:				.875rem !default;
+$body-3-size: 				.75rem !default;
+$caption-size:				.75rem !default;
+$overline-size:				.625rem !default;
+$small-1-size:				.75rem !default;
+$small-2-size: 				.625rem !default;
+
+$title-weight:				400 !default;
+$subtitle-1-weight:			400 !default;
+$subtitle-2-weight:			500 !default;
+$body-1-weight:				400 !default;
+$body-2-weight:				500 !default;
+$body-3-weight: 			400 !default;
+$caption-weight:			400 !default;
+$overline-weight:			400 !default;
+$small-1-weight:			400 !default;
+$small-2-weight: 			500 !default;
+
+// Components
+//
+
+
+// Elevation and Shadow
+
+$elevation-0dp: none !default;
+$elevation-1dp: 0 2px 2px 0 rgba(0,0,0,0.16),0 0 0 1px rgba(0,0,0,0.08) !default;
+$elevation-8dp: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08) !default;
+
+$text-shadow-1dp: 0 0 3px rgba(0,0,0,.8) !default;
+
+$divider-purple: rgba(233,229,246,0.08) !default;
+$divider-white: rgba(255,255,255,0.08) !default;
+
+$black-filter-12: rgba(0,0,0,0.12) !default;
+$white-filter-12: rgba(0,0,0,0.12) !default;
+
+// Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+
+$zindex-navbar:            1000 !default;
+$zindex-dropdown:          1000 !default;
+$zindex-popover:           1060 !default;
+$zindex-tooltip:           1070 !default;
+$zindex-navbar-fixed:      1030 !default;
+$zindex-navbar-sticky:     1030 !default;
+$zindex-modal-bg:          1040 !default;
+$zindex-modal:             1050 !default;
+
+// Button
+//
+
+$pt-button-font-size:						0.875rem !default;
+$pt-button-horizontal-padding: 				8px !default;
+$pt-button-contained-horizontal-padding: 	16px !default;
+$pt-button-height: 							36px !default;
+$pt-dense-button-height: 					32px !default;
+$pt-button-corner-radius:					2px !default;
+
+// Button Color Set
+$pt-button-color-primary:					$purple-500;
+$pt-button-color-secondary:					$purple-pantip-500;
+$pt-button-color-success:					$green-500;
+$pt-button-color-info:						$blue-500;
+$pt-button-color-warning:					$yellow-700;
+$pt-button-color-danger:					$red-500;
+$pt-button-color-light:						$grey-50;
+$pt-button-color-dark:						$indigo-pantip-900;
+$pt-button-color-disabled:					$purple-pantip-800;
+$pt-button-border-disabled:					$purple-pantip-800;
+
+$pt-button-color-primary-hover:				$purple-400;
+$pt-button-color-secondary-hover:			$purple-pantip-400;
+$pt-button-color-success-hover:				$green-400;
+$pt-button-color-info-hover:				$blue-400;
+$pt-button-color-warning-hover:				$yellow-600;
+$pt-button-color-danger-hover:				$red-400;
+$pt-button-color-light-hover:				$grey-400;
+$pt-button-color-dark-hover:				$black;
+
