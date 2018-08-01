@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@storybook/addon-knobs": "^3.4.8",
     "@storybook/cli": "^3.4.8",
     "getstorybook": "^1.7.0",
     "react": "^16.4.1",

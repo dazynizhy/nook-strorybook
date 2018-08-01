@@ -5,7 +5,6 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
 import Task from '../components/Task';
-import List from '../components/List';
 
 export const task = {
   id: '1',
@@ -23,5 +22,4 @@ storiesOf('Task', module)
   .add('default', () => <Task task={task} {...actions} />)
   .add('pinned', () => <Task task={{ ...task, state: 'TASK_PINNED' }} {...actions} />)
   .add('archived', () => <Task task={{ ...task, state: 'TASK_ARCHIVED' }} {...actions} />)
-  .add('ListPantip', () => <List task={task} {...actions}  />);
   
