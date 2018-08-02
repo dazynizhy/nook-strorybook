@@ -1,10 +1,29 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
+const propTypes = {
+    /** title header */
+    active: PropTypes.bool.isRequired,
+    /** color */
+    color: PropTypes.oneOf(['secondary', 'primary', 'success', 'info', 'warning', 'danger', 'light', 'dark']).isRequired,
+    tag: PropTypes.oneOf(['button', 'a', 'input']),
+    onClick: PropTypes.func,
+    size: PropTypes.string,
+    children: PropTypes.node
+};
 
+const defaultProps = {
+    active: false,
+    color: 'secondary',
+    tag: 'button',
+    onClick: false,
+    size: false,
+    children: false
+};
 
 function PostItem({ task: { id, title, vote ,tags }, onPinTask, onVote }){
-   
+  
     let tagBox
     if(tags != null){
         tagBox = tags.map((tags)=>{
@@ -28,7 +47,7 @@ function PostItem({ task: { id, title, vote ,tags }, onPinTask, onVote }){
             <div className="post-item-title">
                 <div>
                     <a  onClick={() => onPinTask(id)} >
-                        <h2>การบินไทยและไทยสมายล์ร่วมสนับสนุนบัตรโดยสารทีมผู้เชี่ยวชาญที่ให้ความช่วยเหลือค้นหานักกีฬาฟุตบอลเยาวชนทีมหมูป่าอะคาเดมี่ </h2>
+                        <h2>{title} </h2>
                     </a>
                 </div>
                 <div className="post-item-by pt-sm-toggle-show">
@@ -55,5 +74,8 @@ function PostItem({ task: { id, title, vote ,tags }, onPinTask, onVote }){
         </div>   
     )
 }
+
+PostItem.propTypes = propTypes
+PostItem.defaultProps = defaultProps
 
 export default PostItem

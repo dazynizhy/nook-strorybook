@@ -3,13 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@storybook/addon-backgrounds": "^3.4.8",
+    "@storybook/addon-info": "^3.4.8",
     "@storybook/addon-knobs": "^3.4.8",
+    "@storybook/addon-options": "^3.4.8",
+    "@storybook/addon-viewport": "^3.4.8",
     "@storybook/cli": "^3.4.8",
     "getstorybook": "^1.7.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "react-storybook-addon-chapters": "^2.1.5",
+    "storybook-host": "^5.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -9,6 +9,7 @@ import { linkTo ,LinkTo, hrefTo } from '@storybook/addon-links';
 
 
 
+
 action('button-click')
 
 //=== BUTTON ADONS ACTION ===//
@@ -56,3 +57,60 @@ hrefTo('LHref', 'log').then(action('URL of this story'));
 
 return <span>See action logger</span>;
 });
+
+
+
+
+///// BACKGROUND ////
+// import backgrounds from "@storybook/addon-backgrounds";
+// storiesOf("Button", module)
+// .addDecorator(backgrounds([
+//   { name: "twitter", value: "#00aced", default: true },
+//   { name: "facebook", value: "#3b5998" },
+// ]))
+// .add("background", () => <Button>Click me</Button>);
+
+
+import addonBackgrounds from "@storybook/addon-backgrounds";
+export const backgrounds = addonBackgrounds([
+  { name: "twitter", value: "#00aced"},
+  { name: "facebook", value: "#3b5998" },
+  { name: "Pantip", value: "#3C3963" , default: true }
+]);
+storiesOf("Button", module)
+  .addDecorator(backgrounds)
+  .add("background", () => <Button>Click me</Button>);
+
+
+//////////////////////////////
+
+
+
+////////////// HOST ///////////
+//Properties
+// host({
+//   title: <string>,
+//   hr: <boolean>,
+//   align: <string>,
+//   height: <number | string>,
+//   width: <number | string>,
+//   background: <boolean | number | string>,
+//   backdrop: <boolean | number | string>,
+//   cropMarks: <boolean>,
+//   border: <boolean | number | string>,
+//   padding: <number | string>,
+// });
+import { host } from 'storybook-host';
+storiesOf('Host helpers.storybook', module)
+.addDecorator(
+  host({
+    title: 'A host container for components under test. กำหนดหัวข้อได้เองด้วยนะจ้ะ',
+    align: 'center bottom',
+    height: '80%',
+    width: 400,
+  }),
+)
+.add('Host', () => <Button>Click Host</Button>);
+
+
+//////////////////////////////
