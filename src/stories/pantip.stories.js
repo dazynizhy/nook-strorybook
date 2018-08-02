@@ -181,11 +181,19 @@ import { withInfo } from '@storybook/addon-info';
 //   })(() => <PostItem task={task} {...actions}  />));
 
 
+import addonBackgrounds from "@storybook/addon-backgrounds";
+export const backgrounds = addonBackgrounds([
+  { name: "twitter", value: "#00aced"},
+  { name: "facebook", value: "#3b5998" },
+  { name: "Pantip", value: "#3C3963" , default: true }
+]);
+
 
 //Deprecated usage
 import infoAddon from '@storybook/addon-info';
 setAddon(infoAddon);
 storiesOf('Pantip')
+.addDecorator(backgrounds)
 .addWithInfo(
 'Post Item',
 `This is the basic usage with the button with providing a label to show the text.`,

@@ -114,3 +114,18 @@ storiesOf('Host helpers.storybook', module)
 
 
 //////////////////////////////
+
+/////////////// STYLE ///////////////
+import styles from "@sambego/storybook-styles";
+
+storiesOf("Button", module)
+  .addDecorator(styles({
+    fontFamily: 'Helvetica, Arial, sans-serif',
+    background: '#e1ecfa',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '500px',
+  }))
+  .add("adon style", () => <Button>Click me</Button>);
+///////////////END STYLES/////

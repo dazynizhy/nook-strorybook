@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@sambego/storybook-styles": "^1.0.0",
     "@storybook/addon-backgrounds": "^3.4.8",
     "@storybook/addon-info": "^3.4.8",
     "@storybook/addon-knobs": "^3.4.8",
@@ -15,6 +16,7 @@
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.4",
     "react-storybook-addon-chapters": "^2.1.5",
+    "storybook-addon-styled-component-theme": "^1.0.3",
     "storybook-host": "^5.0.0"
   },
   "scripts": {
