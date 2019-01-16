@@ -64,7 +64,7 @@ function PostItem({ task: { id, title, vote ,tags }, onPinTask, onVote }){
                 <div className="post-item-viewstat">                
                     <span><i className="material-icons md-18"></i>380</span>                
                     <span><i className="material-icons md-18"></i>73</span>
-                    <a  onClick={() => onPinTask(vote)} ><span><i className="material-icons md-18"></i>{vote}</span></a>
+                    <span><i className="material-icons md-18"></i>{vote}</span>
                 </div>
                 <div className="post-item-tag pt-lg-toggle-show">
                     {tagBox}

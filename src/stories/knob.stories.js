@@ -4,8 +4,6 @@ import { storiesOf } from '@storybook/react';
 import { Button, Welcome } from '@storybook/react/demo';
 
 import { withKnobs, withKnobsOptions , text, boolean, number ,color , object , array ,select , selectV2 , date , button  } from '@storybook/addon-knobs/react';
-import { withNotes } from '@storybook/addon-notes';
-
 const stories = storiesOf('Storybook Knobs', module);
 
 // Add the `withKnobs` decorator to add knobs support to your stories.
@@ -18,17 +16,19 @@ stories.addDecorator(withKnobsOptions({
 }));
 
 
-
-// Knobs for React props
+/////////////////// NOTE //////////////
+//1. Knobs for React props
+import { withNotes } from '@storybook/addon-notes';
 stories.add('with a button', withNotes('การทำ knob แก้ข้อมูลได้โด้ยไม่ต้องแก้ code')(() => (
   <Button disabled={boolean('Disabled', false)} >
     {text('Label', 'Hello Storybook')}
   </Button>
 )));
 
+
+
 // Knobs as dynamic variables.
-stories.add('as dynamic variables', () => {
-    
+stories.add('as dynamic variables', () => {    
 
 //BOOLEAN
 const groupBoolean = 'GROUP-boolean'

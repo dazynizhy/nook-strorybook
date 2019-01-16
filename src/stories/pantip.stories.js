@@ -135,7 +135,7 @@ const stylesheet = {
 
 //Options and Defaults
 setDefaults({
-  header: true, // Toggles display of header with component name and description
+  header: false, // Toggles display of header with component name and description
   inline: false, // Displays info inline vs click button to view
   source: true, // Displays the source of story Component
   propTables: [/* Components used in story */], // displays Prop Tables with this components

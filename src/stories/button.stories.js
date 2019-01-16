@@ -9,7 +9,6 @@ import { linkTo ,LinkTo, hrefTo } from '@storybook/addon-links';
 
 
 
-
 action('button-click')
 
 //=== BUTTON ADONS ACTION ===//
@@ -106,7 +105,7 @@ storiesOf('Host helpers.storybook', module)
   host({
     title: 'A host container for components under test. กำหนดหัวข้อได้เองด้วยนะจ้ะ',
     align: 'center bottom',
-    height: '80%',
+    height: '10%',
     width: 400,
   }),
 )
